@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --line-rule: rgba(19, 21, 26, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F7F5F0;
+  color: #13151A;
+}
+
+/* Visible keyboard focus everywhere — accessibility floor */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #E8A33D;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Cue-line numbering for the transcript/script component — the page's
+   signature device. Mirrors a teleprompter or rehearsal script. */
+.cue-number {
+  font-family: var(--font-plex-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  color: #6B7280;
+}
